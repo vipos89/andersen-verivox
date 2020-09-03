@@ -19,11 +19,11 @@ class TariffController extends Controller
     public function __invoke(Request $request)
     {
         $context = new TariffContext();
-        $kws = $request->input('kwh', 0);
+        $kilowatts = $request->input('kwh', 0);
         $context->setStrategy(new BaseTariff());
-        $baseTariff = $context->getCost($kws);
+        $baseTariff = $context->getCost($kilowatts);
         $context->setStrategy(new PackagedTariff());
-        $packageTariff = $context->getCost($kws);
+        $packageTariff = $context->getCost($kilowatts);
         $data = (collect([$baseTariff, $packageTariff]))->sortBy('annual_cost')->values()->all();
         return response()->json($data);
     }
