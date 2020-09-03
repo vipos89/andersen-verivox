@@ -12,7 +12,7 @@ class BaseTariff implements TariffInterface
 
     public const PRICE_FOR_KWH_IN_CENTS = 22;
 
-    public const TARIFF_NAME = "basic electricity tariff";
+    public const TARIFF_NAME = 'basic electricity tariff';
 
     /**
      * Get annual cost per year
@@ -54,7 +54,7 @@ class BaseTariff implements TariffInterface
      *
      * @return string
      */
-    public function getName()
+    public function getName(): string
     {
         return self::TARIFF_NAME;
     }

@@ -55,7 +55,7 @@ class PackagedTariff implements TariffInterface
      *
      * @return string
      */
-    public function getName()
+    public function getName(): string
     {
         return self::TARIFF_NAME;
     }

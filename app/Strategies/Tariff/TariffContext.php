@@ -13,15 +13,6 @@ class TariffContext
      */
     private $tariffStrategy;
 
-    /**
-     * TariffContext constructor.
-     *
-     * @param TariffInterface $tariffStrategy strategy class
-     */
-    public function __construct(TariffInterface $tariffStrategy)
-    {
-        $this->setStrategy($tariffStrategy);
-    }
 
     /**
      * Set strategy

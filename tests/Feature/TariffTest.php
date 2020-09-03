@@ -33,7 +33,7 @@ class TariffTest extends TestCase
         ];
         $baseTariff = new BaseTariff();
         $packagedTariff = new PackagedTariff();
-        $context = new TariffContext($baseTariff);
+        $context = new TariffContext();
 
         foreach ($data as $item){
             [$productAExpected, $productBExpected] = $item['expected'];
